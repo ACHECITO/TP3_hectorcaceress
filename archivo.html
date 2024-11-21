@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Página Principal - [Nombre del Alumno]</title>
+    <link rel="stylesheet" href="archivo.css">
+</head>
+<body>
+    <header>
+        <h1 id="welcome-text">¡Bienvenidos a Nuestra Página Web!</h1>
+        <p class="description">Explora cada una de nuestras secciones para conocer más sobre nosotros.</p>
+    </header>
+
+    <section class="image-section">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSHXmXqMCx2KbmYy7zWBFaoLWiSWF9M8vvhEQ&s" alt="Imagen en movimiento" class="animated-image">
+    </section>
+
+    <section class="content-description">
+        <p>A continuación, encontrarás los botones para navegar a cada sección de nuestro sitio web:</p>
+        <ul>
+            <li><strong>Página 1:</strong> Información general sobre nuestra empresa.</li>
+            <li><strong>Página 2:</strong> Detalles sobre productos y servicios.</li>
+            <li><strong>Página 3:</strong> Galería de imágenes y proyectos.</li>
+            <li><strong>Página 4:</strong> Información de contacto.</li>
+            <li><strong>Página 5:</strong> Testimonios de nuestros clientes.</li>
+        </ul>
+    </section>
+
+    <section class="buttons">
+        <button class="btn" onclick="window.location.href='pagina1.html'">Ir a Página 1</button>
+        <button class="btn" onclick="window.location.href='pagina2.html'">Ir a Página 2</button>
+        <button class="btn" onclick="window.location.href='pagina3.html'">Ir a Página 3</button>
+        <button class="btn" onclick="window.location.href='pagina4.html'">Ir a Página 4</button>
+        <button class="btn" onclick="window.location.href='pagina5.html'">Ir a Página 5</button>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 [HECTOR CACERES]. Todos los derechos reservados.</p>
+    </footer>
+
+    <script>
+        // Animación de bienvenida
+        let welcomeText = document.getElementById('welcome-text');
+        let text = welcomeText.innerText;
+        let index = 0;
+
+        function typeText() {
+            if (index < text.length) {
+                welcomeText.innerText += text.charAt(index);
+                index++;
+                setTimeout(typeText, 100); // Tiempo entre cada letra
+            }
+        }
+
+        window.onload = typeText;
+    </script>
+</body>
+</html>

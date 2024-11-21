@@ -1,0 +1,106 @@
+/* Estilos generales */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f7f7f7;
+    margin: 0;
+    padding: 0;
+    color: #333;
+}
+
+header {
+    background-color: #00796b;
+    color: white;
+    text-align: center;
+    padding: 50px;
+}
+
+h1 {
+    margin: 0;
+    font-size: 2.5em;
+}
+
+.description {
+    font-size: 1.2em;
+    margin-top: 10px;
+}
+
+/* Estilo para la imagen en movimiento */
+.image-section {
+    text-align: center;
+    margin-top: 30px;
+}
+
+.animated-image {
+    width: 100%;
+    height: auto;
+    animation: moveImage 10s linear infinite;
+}
+
+@keyframes moveImage {
+    0% { transform: translateX(0); }
+    50% { transform: translateX(-50%); }
+    100% { transform: translateX(0); }
+}
+
+/* Descripción de las secciones */
+.content-description {
+    text-align: center;
+    margin-top: 40px;
+    font-size: 1.2em;
+}
+
+.content-description ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.content-description li {
+    margin: 10px 0;
+}
+
+/* Estilos para los botones */
+.buttons {
+    text-align: center;
+    margin-top: 50px;
+}
+
+.btn {
+    background-color: #00796b;
+    color: white;
+    font-size: 1.2em;
+    padding: 15px 30px;
+    margin: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.btn:hover {
+    background-color: #004d40;
+    transform: scale(1.1);
+}
+
+.btn:active {
+    background-color: #003c33;
+}
+
+/* Estilo para el pie de página */
+footer {
+    background-color: #00796b;
+    color: white;
+    text-align: center;
+    padding: 10px;
+    position: absolute;
+    width: 100%;
+    bottom: 0;
+}
+
+/* Animación de texto de bienvenida */
+#welcome-text {
+    overflow: hidden; /* Oculta el texto que aún no ha sido revelado */
+    white-space: nowrap; /* Hace que el texto se quede en una línea */
+    border-right: .15em solid #fff;
+    display: inline-block;
+    font-size: 2em;
+}

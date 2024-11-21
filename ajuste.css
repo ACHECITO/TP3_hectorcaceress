@@ -1,0 +1,227 @@
+/* Estilos globales */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif; /* Tipografía común para todo el sitio */
+    background-color: #f0f0f0; /* Fondo gris claro */
+    color: #333; /* Color de texto oscuro */
+    line-height: 1.6;
+}
+
+a {
+    text-decoration: none; /* Eliminar subrayado de los enlaces */
+    color: inherit; /* Los enlaces heredarán el color del texto */
+}
+
+/* Encabezado común */
+header {
+    background-color: #004d40; /* Color verde oscuro */
+    color: white;
+    text-align: center;
+    padding: 40px;
+}
+
+h1 {
+    margin: 0;
+    font-size: 2.8em;
+    font-weight: bold;
+}
+
+p {
+    font-size: 1.2em;
+    margin-top: 10px;
+}
+
+/* Estilo común para los botones */
+button, .btn, .btn-external {
+    background-color: #00796b; /* Verde medio */
+    color: white;
+    font-size: 1.2em;
+    padding: 15px 30px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+button:hover, .btn:hover, .btn-external:hover {
+    background-color: #004d40; /* Verde oscuro al pasar el ratón */
+    transform: scale(1.05);
+}
+
+button:active, .btn:active, .btn-external:active {
+    background-color: #003c33; /* Verde más oscuro al hacer clic */
+}
+
+/* Sección común para la navegación */
+.navigation-buttons {
+    text-align: center;
+    margin-top: 40px;
+}
+
+/* Pie de página común */
+footer {
+    background-color: #004d40;
+    color: white;
+    text-align: center;
+    padding: 10px;
+    position: absolute;
+    width: 100%;
+    bottom: 0;
+}
+
+/* Contenedores comunes */
+section {
+    margin: 20px auto;
+    padding: 20px;
+    max-width: 1200px;
+}
+
+/* Estilo para las tablas (Página 3) */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 30px;
+    background-color: white;
+}
+
+th, td {
+    padding: 15px;
+    text-align: center;
+    border: 1px solid #ddd;
+}
+
+th {
+    background-color: #00796b; /* Verde más claro para los encabezados de la tabla */
+    color: white;
+    font-size: 1.2em;
+}
+
+/* Estilos específicos para los efectos de animación */
+@keyframes moveText {
+    0% { transform: translateX(100%); }
+    50% { transform: translateX(-100%); }
+    100% { transform: translateX(100%); }
+}
+
+@keyframes moveImage {
+    0% { transform: translateX(0); }
+    50% { transform: translateX(100px); }
+    100% { transform: translateX(0); }
+}
+
+@keyframes fadeIn {
+    0% { opacity: 0; }
+    50% { opacity: 1; }
+    100% { opacity: 0; }
+}
+
+@keyframes zoomIn {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.1); }
+    100% { transform: scale(1); }
+}
+
+/* Estilos de las imágenes en movimiento */
+.moving-image {
+    width: 300px;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 10px;
+    animation: moveImage 8s linear infinite;
+}
+
+/* Estilos para el contenido textual animado */
+.moving-text {
+    font-size: 1.8em;
+    color: #004d40;
+    animation: moveText 5s linear infinite;
+}
+
+/* Estilos para la galería de imágenes (Página 2) */
+.gallery {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+    padding: 20px;
+}
+
+.image-container {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.image {
+    width: 300px;
+    height: 200px;
+    border-radius: 10px;
+    object-fit: cover;
+    transition: all 0.5s ease;
+}
+
+.effect1 {
+    animation: fadeIn 2s ease-in-out infinite;
+}
+
+.effect2 {
+    animation: zoomIn 3s ease-in-out infinite;
+}
+
+.effect3 {
+    animation: rotate 4s ease-in-out infinite;
+}
+
+.effect4 {
+    animation: slideIn 3s ease-in-out infinite;
+}
+
+.effect5 {
+    animation: bounce 2s ease-in-out infinite;
+}
+
+@keyframes slideIn {
+    0% { transform: translateX(-100%); }
+    50% { transform: translateX(0); }
+    100% { transform: translateX(100%); }
+}
+
+@keyframes bounce {
+    0% { transform: translateY(0); }
+    50% { transform: translateY(-20px); }
+    100% { transform: translateY(0); }
+}
+
+@keyframes rotate {
+    0% { transform: rotate(0deg); }
+    50% { transform: rotate(180deg); }
+    100% { transform: rotate(360deg); }
+}
+
+/* Estilos para los enlaces externos */
+.external-link {
+    text-align: center;
+    margin-top: 40px;
+}
+
+.btn-external {
+    background-color: #00796b;
+    color: white;
+    font-size: 1.2em;
+    padding: 15px 30px;
+    border: none;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.btn-external:hover {
+    background-color: #004d40;
+    transform: scale(1.1);
+}
